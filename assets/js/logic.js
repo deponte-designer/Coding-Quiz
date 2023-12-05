@@ -39,3 +39,14 @@
 
 
 
+// Elements
+const startButton = document.getElementById("start");
+const timeElement = document.getElementById("time");
+const questionTitleElement = document.getElementById("question-title");
+const choicesElement = document.getElementById("choices");
+const feedbackElement = document.getElementById("feedback");
+const endScreenElement = document.getElementById("end-screen");
+const finalScoreElement = document.getElementById("final-score");
+const initialsInput = document.getElementById("initials");
+const submitButton = document.getElementById("submit");
+
