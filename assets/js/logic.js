@@ -50,3 +50,7 @@ const finalScoreElement = document.getElementById("final-score");
 const initialsInput = document.getElementById("initials");
 const submitButton = document.getElementById("submit");
 
+// Audio
+const correctAudio = new Audio("./assets/sfx/correct.wav");
+const incorrectAudio = new Audio("./assets/sfx/incorrect.wav");
+
