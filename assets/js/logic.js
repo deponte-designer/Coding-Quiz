@@ -71,3 +71,16 @@ function startTimer() {
     }, 1000);
 };
 
+// Function to display question
+function displayQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionTitleElement.textContent = currentQuestion.question;
+    choicesElement.innerHTML = "";
+
+    currentQuestion.choices.forEach((choice, index) => {
+        const choiceButton = document.createElement("button");
+        choiceButton.textContent = `${index + 1}. ${choice}`;
+        choiceButton.addEventListener("click", () => checkAnswer(choice));
+        choicesElement.appendChild(choiceButton);
+    });
+};
