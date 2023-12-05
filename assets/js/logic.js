@@ -148,6 +148,14 @@ function endQuiz() {
     finalScoreElement.textContent = time;
 };
 
+// Function to start the quiz
+function startQuiz() {
+    startButton.parentElement.classList.add('hide');
+    document.getElementById("questions").classList.remove('hide'); 
+    startTimer();
+    displayQuestion();
+}
+
 // Event listener for start button
 startButton.addEventListener('click', startQuiz);
 
