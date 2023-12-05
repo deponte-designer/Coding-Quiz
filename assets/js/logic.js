@@ -113,4 +113,33 @@ function endQuiz() {
     choicesElement.innerHTML = '';
     endScreenElement.classList.remove('hide');
     finalScoreElement.textContent = time;
-}
+};
+
+// Event listener for start button
+startButton.addEventListener('click', startQuiz);
+
+// Event listener for submit button
+submitButton.addEventListener("click", function () {
+    const initials = initialsInput.value.trim();
+    if (initials !== "") {
+        // Save initials and score to local storage
+        const scoreData = {
+            initials: initials,
+            score: time,
+        };
+
+        // Retrieve existing highscores or initialize an empty array
+        const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+
+        // Add the new score data
+        highscores.push(scoreData);
+
+        // Save the updated highscores to local storage
+        localStorage.setItem("highscores", JSON.stringify(highscores));
+
+        // Redirect or do any additional action as needed
+        console.log("Score saved:", scoreData);
+    }
+
+    window.location.href = 'highscores.html';
+});
