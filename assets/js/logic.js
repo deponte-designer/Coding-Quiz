@@ -111,6 +111,8 @@ function checkAnswer(choice) {
 // Function to end the quiz
 function endQuiz() {
     choicesElement.innerHTML = '';
+    const questionElement = document.getElementById('questions');
+    questionElement.classList.add('hide');
     endScreenElement.classList.remove('hide');
     finalScoreElement.textContent = time;
 };
@@ -143,3 +145,4 @@ submitButton.addEventListener("click", function () {
 
     window.location.href = 'highscores.html';
 });
+
