@@ -84,3 +84,27 @@ function displayQuestion() {
         choicesElement.appendChild(choiceButton);
     });
 };
+
+// Function to check answers
+function checkAnswer(choice) {
+    const currentQuestion = questions[currentQuestionIndex];
+
+    if (choice === currentQuestion.answer) {
+        feedbackElement.textContent = "Correct!";
+        correctAudio.play();
+    } else {
+        feedbackElement.textContent = "Wrong! -10 seconds";
+        time -= 10;
+        incorrectAudio.play();
+    };
+
+    feedbackElement.classList.remove("hide");
+    setTimeout(() => {
+        feedbackElement.classList.add("hide");
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            displayQuestion();
+        }
+    }, 1000);
+};
+
