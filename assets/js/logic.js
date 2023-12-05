@@ -108,3 +108,9 @@ function checkAnswer(choice) {
     }, 1000);
 };
 
+// Function to end the quiz
+function endQuiz() {
+    choicesElement.innerHTML = '';
+    endScreenElement.classList.remove('hide');
+    finalScoreElement.textContent = time;
+}
