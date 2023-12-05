@@ -57,3 +57,17 @@ const incorrectAudio = new Audio("./assets/sfx/incorrect.wav");
 // Variables
 let currentQuestionIndex = 0;
 let time = 75; // Initial time in seconds
+
+// Timer function
+function startTimer() {
+    const timerInterval = setInterval(function () {
+        time--;
+        timeElement.textContent = time;
+
+        if (time <= 0 || currentQuestionIndex === questions.length) {
+            clearInterval(timerInterval);
+            endQuiz();
+        };
+    }, 1000);
+};
+
