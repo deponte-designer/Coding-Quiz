@@ -13,3 +13,20 @@ function getHighscores() {
     const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
     return highscores;
 };
+
+// function to display highscores
+function displayHighscores() {
+    const highscores = getHighscores();
+    const highscoresList = document.getElementById("highscores");
+
+    // Sort highscores from higher score to lower score
+    highscores.sort((a, b) => b.score - a.score);
+
+    // Display highscores as a list
+    highscores.forEach((score, index) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${score.initials} - ${score.score}`;
+        highscoresList.appendChild(listItem);
+    });
+};
+
