@@ -6,7 +6,7 @@ This project is a web-based coding quiz application that tests users on JavaScri
 
 ## Demo
 
-![Demo](./images/web-apis-challenge-demo.gif)
+![Demo](./assets/images/web-apis-challenge-demo.gif)
 
 
 ## Features
@@ -32,11 +32,11 @@ Contributions are welcome!
 
 ## Screenshot
 
-![Coding Quiz Question + Feedback Screenshot](./images/coding-quiz-question-wrong-screenshot.png)
+![Coding Quiz Question + Feedback Screenshot](./assets/images/coding-quiz-question-wrong-screenshot.png)
 
 *The above image illustrates an example question from the quiz along with feedback.*
 
-![Coding Quiz Highscores Screenshot](./images/coding-quiz-highscores-screenshot.png)
+![Coding Quiz Highscores Screenshot](./assets/images/coding-quiz-highscores-screenshot.png)
 
 *The above image showcases an example of the highscores list.*
 
