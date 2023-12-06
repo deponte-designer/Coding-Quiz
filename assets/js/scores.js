@@ -5,3 +5,11 @@
 // - Display the highscores as a list
 // - When the user click on "Clear Highscores", clear local storage
 
+// scores.js
+// Implementing functions to retrieve, display, and clear highscores
+
+// to retrieve highscores from local storage
+function getHighscores() {
+    const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+    return highscores;
+};
