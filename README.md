@@ -15,3 +15,16 @@ This project is a web-based coding quiz application that tests users on JavaScri
 - Dynamically updated HTML and CSS powered by JavaScript
 - High scores stored locally for user comparison
 - Clean, polished, and responsive user interface
+
+
+## Usage
+
+- Click the "Start Quiz" button to begin the coding quiz.
+- Answer each multiple-choice question within the time limit.
+- Receive immediate feedback on your answers.
+- View your final score and save your initials to compare high scores.
+
+
+## Contributing
+
+Contributions are welcome! 
