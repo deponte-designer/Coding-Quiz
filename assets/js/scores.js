@@ -30,3 +30,20 @@ function displayHighscores() {
     });
 };
 
+// Function to clear highscores and update the displayed highscores
+function clearHighscores() {
+    // Clear highscores from local storage
+    localStorage.removeItem("highscores");
+
+    // Clear displayed highscores in the browser
+    const highscoresList = document.getElementById("highscores");
+    highscoresList.innerHTML = "";
+};
+
+// Event listener for clear button
+const clearButton = document.getElementById("clear");
+clearButton.addEventListener("click", clearHighscores);
+
+
+// call the function 
+displayHighscores();
